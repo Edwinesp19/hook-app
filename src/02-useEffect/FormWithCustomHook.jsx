@@ -1,10 +1,10 @@
 // import { useState } from 'react'
 // import { Message } from "./Message";
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../hooks";
 
 export const FormWithCustomHook = () => {
 
-  const {formState,onResetForm, onInputChange,username,email,password} = useForm({
+  const {onResetForm, onInputChange,username,email,password} = useForm({
     username: '',
     email:'',
     password:''
