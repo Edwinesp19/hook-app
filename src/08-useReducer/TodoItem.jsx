@@ -5,7 +5,7 @@ export const TodoItem = ({id,description,done,onDeleteTodo,onCheckedTodo}) => {
 
   return (
     <div className="animate-fade-up animate-duration-300 animate-once animate-ease-in-out flex gap-2">
-    <label className=" hover:bg-white/10 transition-all ease-in-out duration-200 cursor-pointer flex  rounded-2xl p-3 px-4 gap-4 h-auto w-full bg-white/5 " htmlFor={`todo-${id}`}>
+    <label className=" hover:bg-white/10 transition-all ease-in-out duration-200 cursor-pointer flex items-center rounded-2xl p-3 px-4 gap-4 h-auto w-full bg-white/5 " htmlFor={`todo-${id}`}>
     <input onClick={()=>onCheckedTodo(id)} className="peer" type="checkbox" value={done} id={`todo-${id}`}  name={`todo-${id}`}></input>
     <p className="break-all select-none peer-checked:line-through peer-checked:text-white/60 transition-all ease-in-out duration-200 text-white">{description}</p>
         </label>
