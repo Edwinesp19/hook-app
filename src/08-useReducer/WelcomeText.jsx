@@ -14,7 +14,7 @@ export const WelcomeText = () => {
             saludo = 'Buenas noches';
         }
 
-        return <p className="animate-fade-up animate-once animate-ease-in-out animate-delay-100 text-xl font-normal  text-white drop-shadow-xl w-full">{saludo}, {name} 👋🏼</p>;
+        return <p className="animate-fade-up animate-once animate-ease-in-out animate-delay-100 text-md md:text-xl font-normal  text-white drop-shadow-2xl w-full">{saludo}, {name} 👋🏼</p>;
     }
 
   return (getSaludo())
