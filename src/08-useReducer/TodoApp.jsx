@@ -7,7 +7,7 @@ import { useTodos } from "../hooks/index";
 
 export default function TodoApp() {
 
-    const {todos, backgroundImage, handleNewTodo,handleDeleteTodo,handleCheckedTodo} = useTodos();
+    const {todos, todosCount, completedTodos ,  backgroundImage, handleNewTodo,handleDeleteTodo,handleCheckedTodo} = useTodos();
 
 
     return (
@@ -23,7 +23,7 @@ export default function TodoApp() {
                         <h2 className="drop-shadow-lg animate-fade-up animate-once animate-ease-in-out   w-auto text-white top-0 text-xl md:text-3xl">Things To do</h2>
                         
                         {
-                            todos.length >0?<p className="  w-fit text-white  font-bold text-md md:text-lg bg-white/10 px-3 py-1 rounded-xl">{todos.filter(td=>td.done).length} / {todos.length}</p>:''
+                            todos.length >0?<p className="  w-fit text-white  font-bold text-md md:text-lg bg-white/10 px-3 py-1 rounded-xl">{completedTodos} / {todosCount}</p>:''
                         }
 
                     </span>
