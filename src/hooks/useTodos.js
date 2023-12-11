@@ -25,9 +25,6 @@ export const useTodos = () => {
 
     const [todos, dispatch] = useReducer(todoReducer, initialState,init);
 
-    let todosCount= todos.length;
-    let completedTodos= todos.filter(td=>td.done).length;
-
     useEffect(() => {
         localStorage.setItem('todos',JSON.stringify(todos)); //guarda el listado en el local storage
     }, [todos])
@@ -58,13 +55,12 @@ export const useTodos = () => {
 
   return {
     todos,
-    todosCount, 
-    completedTodos,
+    todosCount:todos.length,
+    completedTodos:todos.filter(td=>td.done).length,
     handleNewTodo,
     handleDeleteTodo,
     handleCheckedTodo,
     backgroundImage
   }
    
-  
 }
